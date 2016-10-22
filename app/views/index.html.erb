@@ -1,0 +1,18 @@
+<body>
+<h1><%=@msg1.title %></h1>
+</br>
+</br>
+
+<p><%@msgs.each do |msg|
+    <%= msg.title%></br>
+    <%= msg.body%></br>
+                </br>
+                </br>
+    <%end%>
+    
+</p>   
+    
+    
+    
+    
+</body>

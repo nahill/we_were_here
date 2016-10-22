@@ -1,0 +1,25 @@
+
+    <% if @msg1 %>
+            <h1><%=@msg1.title %></h1>
+            <h3><%=@msg1.body %></h3>
+    <% else %>
+    <% end %>
+</br>
+</br>
+</br>
+</br>
+<p><%@msgs.each do |msg| %>
+    <%= msg.title%></br>
+    <%= msg.body%></br>
+                </br>
+                </br>
+    <%end%>
+    
+</p>   
+    
+<%= form_for @msg, url: {action: "create"} do |f| %>
+  <%= f.label :title, "Title" %>
+  <%= f.text_field :title %></br>
+  <%= f.text_area :body, size: "60x12" %></br>
+  <%= f.submit "Post" %>
+<% end %>
